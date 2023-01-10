@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/svg+xml" href="multimedia/logo.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Tienda de bebidas</title>
+</head>
+<body>
+    <header>
+        <div class="header-section container">
+            
+            <img class="logo" src="multimedia/logo.png" alt="">
+            <h1 class="titulo">Tienda de bebidas</h1>
+            <div>
+                
+                <img onclick="showCart(this)" class="cart" src="multimedia/001-carrito-de-compras.png" alt="">
+            
+                <p class="count-product">0</p>
+            </div>
+            <div class="cart-products" id="products-id">
+                <p class="close-btn" onclick="closeBtn()">X</p>
+                <h3>Mi carrito</h3>
+                <div class="card-items">
+                </div>
+                <h2>Total: $ <strong class="price-total">0</strong></h2>
+            </div>
+        </div>
+    </header>
+    <section class="container">
+        <div class="products">
+            <div class="carts">
+                <div>
+                    <img src="multimedia/baileys.jpg" alt="botella de baileys">
+                    <p>$ <span>2562</span></p>
+                </div>
+                <p class="title">Licor Baileys original 750 cc.</p>
+                <a href="" data-id="1" class="btn-add-cart">Comprar</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="multimedia/campari.jpg" alt="botella de campari">
+                    <p>$ <span>1450</span></p>
+                </div>
+                <p class="title"> Aperitivo Campari 750 cc.</p>
+                <a href="" class="btn-add-cart" data-id="2">Comprar</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="multimedia/fernet.jpg" alt="botella de fernet">
+                    <p>$ <span>1799</span></p>
+                </div>
+                <p class="title"> Fernet Branca botella 750 cc.</p>
+                <a href="" data-id="3" class="btn-add-cart">Comprar</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="multimedia/gin.jpg" alt="botella de gin">
+                    <p>$ <span>6260</span></p>
+                </div>
+                <p class="title"> Gin Bombay Sapphire 750 Ml</p>
+                <a href="" data-id="4" class="btn-add-cart">Comprar</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="multimedia/ron.jpg" alt="botella de ron">
+                    <p>$ <span>3000</span></p>
+                </div>
+                <p class="title"> Ron Havana Club añejo especial 750 Ml</p>
+                <a href="" data-id="5" class="btn-add-cart">Comprar</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="multimedia/vodka.jpg" alt="botella de vodka">
+                    <p>$ <span>1700</span></p>
+                </div>
+                <p class="title"> Vodka Smirnoff 750 Ml</p>
+                <a href="" data-id="6" class="btn-add-cart">Comprar</a>
+            </div>
+            
+            <div class="carts">
+                <div>
+                    <img src="multimedia/bacardi.jpeg" alt="botella de bacardi">
+                    <p>$ <span>3000</span></p>
+                </div>
+                <p class="title"> Bacardi Carta Oro Ron 750 ml</p>
+                <a href="" data-id="7" class="btn-add-cart">Comprar</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="multimedia/martini.jpg" alt="botella de martini">
+                    <p>$ <span>1400</span></p>
+                </div>
+                <p class="title"> Aperitivo Martini Extra Dry 1 L</p>
+                <a href="" data-id="8" class="btn-add-cart">Comprar</a>
+            </div>
+            
+        </div>
+    </section>
+    
+    <script src="carrito.js"></script>
+</body>
+</html>
