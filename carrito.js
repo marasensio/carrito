@@ -6,7 +6,7 @@ let precio_total = document.querySelector('.price-total')
 let cantidad_productos = document.querySelector('.count-product');
 
 
-let carrito = [];
+let carrito =  [];
 let total = 0;
 let cantidad_items = 0;
 
@@ -20,6 +20,19 @@ function agregar_producto(e){
     if (e.target.classList.contains('btn-add-cart')) {
         const selecciona_producto = e.target.parentElement; 
         leer_contenido(selecciona_producto);
+        Toastify({
+
+            text: "Producto agregado",
+            
+            duration: 1000,
+            style: {
+                fontSize: "16px",
+                color: "black",
+                fontFamily: 'monserrat',
+                background: "linear-gradient(to right, #00b09b, #96c93d)",
+                },
+            
+            }).showToast();
     }
 }
 
@@ -105,6 +118,7 @@ function cargar_Html(){
         // Agregar el carrito de compras al storage
         localStorage.setItem('.card-items', JSON.stringify(carrito));
         items.appendChild(row);
+        
     });
 }
 
@@ -122,11 +136,23 @@ function closeBtn(){
     document.getElementById("products-id").style.display = "none";
 }
 
-// Muestra los cursos de Local Storage
-/*Se podría hacer que se mantengan guardados los productos del carrito aunque actulicemos el 
-browser usando las siguientes líneas
+//Muestra los productos de Local Storage
+
 document.addEventListener('DOMContentLoaded', () => {
     carrito = JSON.parse( localStorage.getItem('.card-items') ) || [];
-
     cargar_Html();
-})*/
+})
+
+// Footer con Fetch
+let temp = document.querySelector('.temp');
+let desc = document.querySelector('.desc');
+fetch('https://api.openweathermap.org/data/2.5/weather?q=Mendoza&lang=es&units=metric&appid=50a7aa80fa492fa92e874d23ad061374')
+    .then(response => response.json())
+    .then(data => {
+        let tempValue = data['main']['temp'];
+        let nameValue = data['name'];
+        let descValue = data['weather'][0]['description'];
+
+        desc.innerHTML = "Descripción: "+descValue;
+        temp.innerHTML = "Temperatura: "+tempValue+" °C";
+})

@@ -174,4 +174,18 @@ p.close-btn{
 .cart-products .item .item-content h5.cart-price{
     font-weight: 700;
 }
+/*Footer*/
+.contenedor{
+    width: 100%;
+    background:  #0a0a7a;
+    height: 100px;
+    border-radius: 2px;
+}
 
+.contenedor p{
+    font-family: 'monserrat';
+    text-align: center;
+    color: white;
+    margin:10px;
+    font-size:18px;
+}
